@@ -26,10 +26,10 @@ public class AvroExampleTest {
 
   private static final String EXPRESSION_1 ="select * from OrderEvent"
       + "#groupwin(itemName)"
-      + "#time(5 seconds)"
+      + "#ext_timed(cast(timestamp, long, dateformat: 'iso'), 10 seconds)"
       + "#expr_batch(current_count >= 2) "
       + "group by itemName "
-      + "output first every 4 seconds";
+      + "output first every 6 seconds";
 
   private static final String EXPRESSION_2 ="select * from OrderEvent"
       + "#groupwin(com.madeup.esper.example.AvroExampleTest.madeupMethod(itemName))"
