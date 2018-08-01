@@ -11,9 +11,6 @@ import org.apache.avro.generic.GenericRecord;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * © 2018 Johnson Controls. All Rights Reserved.
- **/
 public class AvroExampleTest {
 
   private static final String ORDER_SCHEMA = ""
